@@ -93,7 +93,8 @@
         screenshoot: screenshoot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LEFT_GUI) &kp S>;
+            bindings = <&kp LS(LEFT_GUI)>, <&macro_wait_time 20>, <&kp S>;
+
             label = "SCREENSHOOT";
         };
 
@@ -114,8 +115,10 @@
         language_switch: language_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp LEFT_SHIFT>;
+            bindings = <&kp LEFT_ALT>, <&macro_wait_time 20>, <&kp LEFT_SHIFT>;
+
             label = "LANGUAGE_SWITCH";
+            wait-ms = <50>;
         };
     };
 
@@ -151,10 +154,10 @@
 
         layer_3 {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans     &ext_power EP_TOG  &rgb_ug RGB_COLOR_HSB(290,86,40)  &rgb_ug RGB_EFF   &trans           &trans  &trans
-&trans  &bt BT_CLR    &trans        &trans        &trans        &kp COLON  &bl BL_TOG         &kp K_PREVIOUS                    &kp K_PLAY_PAUSE  &kp K_NEXT       &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans     &bt BT_DISC 0      &kp K_VOLUME_DOWN                 &kp K_MUTE        &kp K_VOLUME_UP  &trans  &trans
-                                    &trans        &trans        &trans     &trans             &trans                            &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans     &ext_power EP_TOG  &kp C_BACKLIGHT_TOGGLE  &rgb_ug RGB_EFF   &trans           &trans  &trans
+&trans  &bt BT_CLR    &trans        &trans        &trans        &kp COLON  &bl BL_TOG         &kp C_PREVIOUS          &kp C_PLAY_PAUSE  &kp C_NEXT       &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans     &bt BT_DISC 0      &kp C_VOLUME_DOWN       &kp C_MUTE        &kp C_VOLUME_UP  &trans  &trans
+                                    &trans        &trans        &trans     &trans             &trans                  &trans
             >;
         };
 
