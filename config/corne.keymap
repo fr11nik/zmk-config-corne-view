@@ -93,7 +93,13 @@
         screenshoot: screenshoot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LEFT_GUI)>, <&macro_wait_time 20>, <&kp S>;
+            bindings = <
+                &kp LGUI
+                &kp LSHIFT
+                &kp S
+                &kp LSHIFT
+                &kp LGUI
+            >;
 
             label = "SCREENSHOOT";
         };
