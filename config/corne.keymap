@@ -126,7 +126,7 @@
             bindings = <
 &kp GRAVE         &kp Q           &kp W           &kp E        &kp R         &kp T               &kp Y           &kp U         &kp I          &kp O            &kp P               &kp BACKSLASH
 &language_switch  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &kp F         &kp G               &kp H           &hm RSHIFT J  &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &kp SQT
-&none             &kp Z           &kp X           &kp C        &kp V         &kp B               &kp N           &kp M         &kp COMMA      &kp DOT          &kp FSLH            &kp C_AC_HOME
+&kp LC(LA(N0))    &kp Z           &kp X           &kp C        &kp V         &kp B               &kp N           &kp M         &kp COMMA      &kp DOT          &kp FSLH            &kp C_AC_HOME
                                                   &kp TAB      &ltq 1 SPACE  &hm LEFT_SHIFT ESC  &kp LEFT_SHIFT  &ltq 2 ENTER  &kp BACKSPACE
             >;
         };
