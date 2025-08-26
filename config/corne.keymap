@@ -18,12 +18,10 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
             quick-tap-ms = <200>;
-            global-quick-tap;
         };
 
         ltq: ltq {
