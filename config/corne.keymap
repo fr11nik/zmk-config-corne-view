@@ -89,6 +89,11 @@
             bindings = <&kp EQUAL>;
             key-positions = <29 30>;
         };
+
+        ru_sign {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <41 36>;
+        };
     };
 
     macros {
