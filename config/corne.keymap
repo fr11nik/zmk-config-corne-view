@@ -31,8 +31,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            global-quick-tap;
-            quick-tap-ms = <130>;
+            quick-tap-ms = <200>;
         };
     };
 
@@ -135,7 +134,7 @@
             bindings = <
 &kp GRAVE           &kp Q           &kp W           &kp E        &kp R         &kp T               &kp Y           &kp U         &kp I          &kp O            &kp P               &kp BACKSLASH
 &kp LA(LEFT_SHIFT)  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &kp F         &kp G               &kp H           &hm RSHIFT J  &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &kp SQT
-&kp LC(LA(N0))      &kp Z           &kp X           &kp C        &kp V         &kp B               &kp N           &kp M         &kp COMMA      &kp DOT          &kp FSLH            &kp C_AC_HOME
+&kp LC(LA(N0))      &kp Z           &kp X           &kp C        &kp V         &kp B               &kp N           &kp M         &kp COMMA      &kp DOT          &kp FSLH            &kp RIGHT_SHIFT
                                                     &kp TAB      &ltq 1 SPACE  &hm LEFT_SHIFT ESC  &kp LEFT_SHIFT  &ltq 2 ENTER  &kp BACKSPACE
             >;
         };
@@ -161,9 +160,27 @@
         layer_3 {
             bindings = <
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans     &ext_power EP_TOG  &kp C_BACKLIGHT_TOGGLE  &rgb_ug RGB_EFF   &trans           &trans  &trans
-&trans  &bt BT_CLR    &trans        &trans        &trans        &kp COLON  &rgb_ug RGB_TOG    &kp C_PREVIOUS          &kp C_PLAY_PAUSE  &kp C_NEXT       &trans  &trans
+&tog 4  &bt BT_CLR    &trans        &trans        &trans        &kp COLON  &rgb_ug RGB_TOG    &kp C_PREVIOUS          &kp C_PLAY_PAUSE  &kp C_NEXT       &trans  &trans
 &trans  &trans        &trans        &trans        &trans        &trans     &bt BT_DISC 0      &kp C_VOLUME_DOWN       &kp C_MUTE        &kp C_VOLUME_UP  &trans  &trans
                                     &trans        &trans        &trans     &trans             &trans                  &trans
+            >;
+        };
+
+        gaming_layer {
+            bindings = <
+&kp ESC  &kp T      &kp Q  &kp W   &kp E  &kp R      &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB  &kp LSHFT  &kp A  &kp S   &kp D  &kp F      &trans  &trans  &trans  &trans  &trans  &trans
+&kp I    &kp LCTRL  &kp Z  &kp X   &kp C  &kp V      &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &mo 5  &kp SPACE  &tog 4  &trans  &trans
+            >;
+        };
+
+        gaming_2 {
+            bindings = <
+&trans  &kp N6  &kp N7  &trans  &kp N8  &kp N9  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &kp N0  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &none   &trans  &trans  &trans  &trans
             >;
         };
 
@@ -172,7 +189,5 @@
         extra2 { status = "reserved"; };
 
         extra3 { status = "reserved"; };
-
-        extra4 { status = "reserved"; };
     };
 };
