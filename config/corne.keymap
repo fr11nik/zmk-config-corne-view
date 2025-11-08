@@ -192,6 +192,6 @@
 
         extra3 { status = "reserved"; };
 
-        layer_9 { label = "gaming"; };
+        layer_9 { status = "reserved"; };
     };
 };
