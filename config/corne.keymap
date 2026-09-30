@@ -11,6 +11,12 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
+&soft_off {
+    hold-time-ms = <3000>;
+    // ponytail: both halves wait for release; restore off-on-press if BLE shutdown is unreliable.
+    /delete-property/ split-peripheral-off-on-press;
+};
+
 / {
     behaviors {
         hm: homerow_mods {
